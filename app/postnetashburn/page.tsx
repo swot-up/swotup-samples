@@ -28,7 +28,7 @@ export default function PostnetAshburnReport() {
                 {/* Big Prototype Link */}
                 <div className="flex flex-col items-center mb-24">
                     <a
-                        href="/postnetashburn/sample"
+                        href="/postnetashburn/sample/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group relative inline-flex items-center justify-center gap-3 px-10 py-6 text-xl font-bold text-white transition-all bg-red-600 rounded-2xl hover:bg-red-700 hover:scale-[1.02] shadow-xl hover:shadow-2xl shadow-red-600/20 overflow-hidden mb-6"
