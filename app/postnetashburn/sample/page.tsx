@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 function FAQItem({ faq }: { faq: { q: string, a: string } }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -1267,10 +1268,13 @@ export default function PostnetSamplePage() {
 
                                 {/* Central Image Placeholder */}
                                 <div className="w-3/4 h-3/4 rounded-2xl bg-slate-100 border border-slate-200 shadow-lg overflow-hidden relative z-10">
-                                    <div className="absolute inset-0 flex items-center justify-center text-slate-500 flex-col gap-2">
-                                        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
-                                        <span className="text-sm font-medium tracking-wide">Local Storefront Image</span>
-                                    </div>
+                                    <Image
+                                        src="/postnet/storefront.png"
+                                        alt="PostNet Ashburn Storefront"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                                 </div>
                             </div>
                         </div>
@@ -1387,7 +1391,12 @@ export default function PostnetSamplePage() {
                             <div className="relative">
                                 <div className="absolute -inset-4 bg-red-500/10 blur-3xl rounded-full"></div>
                                 <div className="relative aspect-[4/5] rounded-[2.5rem] bg-white border-4 border-slate-200 shadow-2xl overflow-hidden flex items-center justify-center">
-                                    <span className="text-slate-400 font-medium">Local Team & Storefront</span>
+                                    <Image
+                                        src="/postnet/team.png"
+                                        alt="PostNet Ashburn Team"
+                                        fill
+                                        className="object-cover"
+                                    />
                                 </div>
                                 {/* floating badge */}
                                 <div className="absolute -bottom-8 -right-8 bg-white border border-slate-200 p-6 rounded-3xl shadow-2xl max-w-xs">

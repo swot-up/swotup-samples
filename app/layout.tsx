@@ -13,8 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://samples.swot-up.com"),
   title: "Swot Up Samples",
   description: "Showcasing modern web solutions for local businesses.",
+  icons: {
+    icon: "/icon.png",
+  },
+  openGraph: {
+    title: "Swot Up Samples",
+    description: "Showcasing modern web solutions for local businesses.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
